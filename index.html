@@ -28,12 +28,6 @@
     <table class="table table-hover">
         <thead>
             <tr>
-                <h1>Ծրագրավորում III Երևան</h1>
-            </tr>
-            <tr>
-                <h1>Անուն Ազգանուն</h1>
-            </tr>
-            <tr>
                 <th scope="col">#</th>
                 <th scope="col">Գույն</th>
                 <th scope="col">Նկարագրություն</th>
@@ -43,17 +37,36 @@
         <tbody>
             <tr>
                 <th scope="row">1</th>
-                <td scope="row" style="background-color:green;"></td>
+                <td scope="row" style="background-color:rgb(15, 117, 15);"></td>
                 <td>Կանաչը խոտն է, որը բազմանում է N ցիկլը մեկ,մահանում է երբ նրան ուտում է խոտակերը, կամ այրում է
                     կրակը, կամ նրան կոխկրտում է գիշատիչը</td>
                 <td id="grassCount"></td>
             </tr>
+            
             <tr>
                 <th scope="row">2</th>
-                <td scope="row" style="background-color:orange;"></td>
+                <td scope="row" style="background-color:rgb(255, 238, 0);"></td>
                 <td>Դեղինը խոտակերն է, որը բազմանում է N հատ խոտ ուտելուց հետո և մահանում է N հատ չուտելուց հետո, կամ
                     երբ նրան ուտում է գիշատիչը, կամ երբ նրան այրում է կրակը:</td>
                 <td id="grassEaterCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td scope="row" style="background-color:rgb(173, 30, 30);"></td>
+                <td>Կարմիր - գիշատիչ, սնվում է խոտակերներով, բազմանում երբ էներգիան հասնում է 12ի և մեռնում երբ 0 է դառնում</td>
+                <td id="grassCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td scope="row" style="background-color:rgb(30, 109, 173);"></td>
+                <td>Կապույտ - որսորդ, որսում է գիշատիչներին, բազմանում երբ էներգիան հասնում է 16ի և մեռնում երբ 0 է դառնում</td>
+                <td id="grassCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td scope="row" style="background-color:rgb(83, 36, 172);"></td>
+                <td>Մանուշակագույն - ծաղիկներ, բազմանում են խոտակերների մեռնելուց հետո՝ լցնելով դաշտը նոր բուսերով</td>
+                <td id="grassCount"></td>
             </tr>
         </tbody>
     </table>
@@ -61,5 +74,4 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
