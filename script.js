@@ -1,5 +1,3 @@
-//Proekt
-
 var matrix = [];
 
 var grassArr = [];
