@@ -1,3 +1,4 @@
+var socket = io();
 var matrix = [];
 
 var grassArr = [];
@@ -16,6 +17,10 @@ function setup() {
          matrix[y][x] = random([0, 1, 2, 3, 4, 5]);
       }
    }
+
+   socket.on("weather", function (data) {
+      weath = data;
+  })
 
    frameRate(5);
    createCanvas(matrix[0].length * side, matrix.length * side);
@@ -51,8 +56,15 @@ function draw() {
       for (var x = 0; x < matrix[y].length; x++) {
 
          if (matrix[y][x] == 1) {
-            fill("#8cd98b");    //kanach
-         }
+            if(weath == "summer") {
+               fill("#8cd98b");
+           }else if (weath == "autumn") {
+               fill("#333300");
+           }else if (weath == "winter") {
+               fill("white");
+           }else if (weath == "spring") {
+               fill("#4dffa6");
+         }}
          else if (matrix[y][x] == 2) {
             fill("#f5f08c")   //dexin
          }
@@ -72,6 +84,9 @@ function draw() {
 
       }
    }
+
+   socket.on('send matrix', draw); 
+
    for (var i in grassArr) {
       grassArr[i].mul();
    }
